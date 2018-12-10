@@ -2,16 +2,8 @@ import React, { Component } from 'react';
 
 class WizardForm extends Component {
 
-  state={
-    name: "",
-    house: "",
-    redux: ""
-  }
-
   handleChange = (e) => {
-    this.setState({
-      [e.target.name] : e.target.value
-    })
+    console.log(e.target);
   }
 
   handleSubmit = (e) => {
@@ -20,21 +12,26 @@ class WizardForm extends Component {
   }
 
   render() {
-    const {name, house, redux} = this.state
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
           Name
         </label>
-          <input type="text" name="name" value={name} onChange={this.handleChange}/>
+          <input type="text" name="name" value={
+              //Where should we control this?
+            } onChange={this.handleChange}/>
         <label>
           House
         </label>
-          <input type="text" name="house" value={house} onChange={this.handleChange}/>
+          <input type="text" name="house" value={
+              //Where should we control this?
+            } onChange={this.handleChange}/>
         <label>
           Redux
         </label>
-          <input type="text" name="redux" value={redux} onChange={this.handleChange}/>
+          <input type="text" name="redux" value={
+              //Where should we control this?
+            } onChange={this.handleChange}/>
         <input type="submit"/>
       </form>
     );
